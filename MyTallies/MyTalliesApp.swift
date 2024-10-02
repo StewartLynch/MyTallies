@@ -19,7 +19,7 @@ import SwiftUI
 struct MyTalliesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TallySelectionView()
         }
     }
 }
