@@ -19,6 +19,7 @@ import SwiftData
 struct TallySelectionView: View {
     @Query(sort: \Tally.name) var tallies: [Tally]
     @State private var selectedTally: Tally?
+    @Environment(\.modelContext) var context
     var body: some View {
         NavigationStack {
             VStack {
@@ -33,6 +34,21 @@ struct TallySelectionView: View {
                     }
                     .buttonStyle(.bordered)
                     .padding()
+                    if selectedTally != nil {
+                        SingleTallyView(size: 100, tally: selectedTally!)
+                        Button {
+                            withAnimation {
+                                selectedTally?.reset()
+                                try? context.save()
+                            }
+                        } label: {
+                            Label("Reset", systemImage: "arrow.counterclockwise")
+                        }
+                        .font(.title)
+                        .buttonStyle(.bordered)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding()
+                    }
                     Spacer()
                 }
             }

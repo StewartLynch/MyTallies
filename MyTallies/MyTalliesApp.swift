@@ -14,6 +14,7 @@
 
 
 import SwiftUI
+import SwiftData
 
 @main
 struct MyTalliesApp: App {
@@ -21,5 +22,6 @@ struct MyTalliesApp: App {
         WindowGroup {
             TallySelectionView()
         }
+        .modelContainer(for: Tally.self)
     }
 }

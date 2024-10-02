@@ -10,6 +10,7 @@
 		BB5440DD2CA8CC6900BB0AA6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5440DC2CA8CC6900BB0AA6 /* Launch Screen.storyboard */; };
 		BB78ADA62CADCD1200741F9D /* Tally.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA52CADCD1200741F9D /* Tally.swift */; };
 		BB78ADA82CADCE0100741F9D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA72CADCE0100741F9D /* MockData.swift */; };
+		BB78ADAA2CADF51D00741F9D /* SingleTallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA92CADF51D00741F9D /* SingleTallyView.swift */; };
 		BBB7A0CF2CA8C8D600B6E875 /* MyTalliesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C82CA8C8D600B6E875 /* MyTalliesApp.swift */; };
 		BBB7A0D02CA8C8D600B6E875 /* TallySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */; };
 		BBB7A0D22CA8C8D600B6E875 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB7A0C22CA8C8D600B6E875 /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		BB5440DC2CA8CC6900BB0AA6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BB78ADA52CADCD1200741F9D /* Tally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tally.swift; sourceTree = "<group>"; };
 		BB78ADA72CADCE0100741F9D /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		BB78ADA92CADF51D00741F9D /* SingleTallyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTallyView.swift; sourceTree = "<group>"; };
 		BBB7A08F2CA8626300B6E875 /* MyTallies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTallies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB7A0C22CA8C8D600B6E875 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBB7A0C42CA8C8D600B6E875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				BBB7A0C82CA8C8D600B6E875 /* MyTalliesApp.swift */,
 				BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */,
+				BB78ADA92CADF51D00741F9D /* SingleTallyView.swift */,
 				BB78ADA52CADCD1200741F9D /* Tally.swift */,
 				BB5440DC2CA8CC6900BB0AA6 /* Launch Screen.storyboard */,
 				BBB7A0C42CA8C8D600B6E875 /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 				BB78ADA82CADCE0100741F9D /* MockData.swift in Sources */,
 				BBB7A0D02CA8C8D600B6E875 /* TallySelectionView.swift in Sources */,
 				BB78ADA62CADCD1200741F9D /* Tally.swift in Sources */,
+				BB78ADAA2CADF51D00741F9D /* SingleTallyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
