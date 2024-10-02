@@ -20,6 +20,7 @@ struct TallySelectionView: View {
     @Query(sort: \Tally.name) var tallies: [Tally]
     @State private var selectedTally: Tally?
     @Environment(\.modelContext) var context
+    @State private var newTally = false
     var body: some View {
         NavigationStack {
             VStack {
@@ -53,6 +54,39 @@ struct TallySelectionView: View {
                 }
             }
             .navigationTitle("My Tallies")
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    if !tallies.isEmpty {
+                        Button {
+                            if let selectedTally {
+                                context.delete(selectedTally)
+                                try? context.save()
+                                if !tallies.isEmpty {
+                                    self.selectedTally = tallies.first!
+                                }
+                            }
+                        } label: {
+                            Image(systemName: "trash")
+                                .foregroundStyle(.red)
+                        }
+                    }
+                    Button {
+                        newTally = true
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .imageScale(.large)
+                    }
+                }
+            }
+            .sheet(isPresented: $newTally) {
+                NewTallyView(selectedTally: self.$selectedTally)
+                    .presentationDetents([.height(250)])
+            }
+            .onAppear {
+                if !tallies.isEmpty {
+                    selectedTally = tallies.first!
+                }
+            }
         }
     }
 }
