@@ -12,11 +12,38 @@
 		BB78ADA82CADCE0100741F9D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA72CADCE0100741F9D /* MockData.swift */; };
 		BB78ADAA2CADF51D00741F9D /* SingleTallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA92CADF51D00741F9D /* SingleTallyView.swift */; };
 		BB78ADAC2CAE006300741F9D /* NewTallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADAB2CAE006300741F9D /* NewTallyView.swift */; };
+		BBA0DC922CAF33F900A9DDDC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA0DC492CAF31E400A9DDDC /* WidgetKit.framework */; };
+		BBA0DC932CAF33F900A9DDDC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA0DC4B2CAF31E400A9DDDC /* SwiftUI.framework */; };
+		BBA0DC9E2CAF33FB00A9DDDC /* MyTalliesWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BBA0DC912CAF33F900A9DDDC /* MyTalliesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BBB7A0CF2CA8C8D600B6E875 /* MyTalliesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C82CA8C8D600B6E875 /* MyTalliesApp.swift */; };
 		BBB7A0D02CA8C8D600B6E875 /* TallySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */; };
 		BBB7A0D22CA8C8D600B6E875 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB7A0C22CA8C8D600B6E875 /* Preview Assets.xcassets */; };
 		BBB7A0D32CA8C8D600B6E875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB7A0C42CA8C8D600B6E875 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBA0DC9C2CAF33FB00A9DDDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBB7A0872CA8626300B6E875 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBA0DC902CAF33F900A9DDDC;
+			remoteInfo = MyTalliesWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BBA0DC602CAF31E600A9DDDC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BBA0DC9E2CAF33FB00A9DDDC /* MyTalliesWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BB5440DC2CA8CC6900BB0AA6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -24,6 +51,11 @@
 		BB78ADA72CADCE0100741F9D /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		BB78ADA92CADF51D00741F9D /* SingleTallyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTallyView.swift; sourceTree = "<group>"; };
 		BB78ADAB2CAE006300741F9D /* NewTallyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTallyView.swift; sourceTree = "<group>"; };
+		BBA0DC2F2CAF2D3900A9DDDC /* MyTallies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTallies.entitlements; sourceTree = "<group>"; };
+		BBA0DC492CAF31E400A9DDDC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BBA0DC4B2CAF31E400A9DDDC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BBA0DC912CAF33F900A9DDDC /* MyTalliesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyTalliesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA0DCA32CAF343A00A9DDDC /* MyTalliesWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTalliesWidgetExtension.entitlements; sourceTree = "<group>"; };
 		BBB7A08F2CA8626300B6E875 /* MyTallies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTallies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB7A0C22CA8C8D600B6E875 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBB7A0C42CA8C8D600B6E875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,7 +63,37 @@
 		BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TallySelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BBA0DC9F2CAF33FB00A9DDDC /* Exceptions for "MyTalliesWidget" folder in "MyTalliesWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BBA0DC902CAF33F900A9DDDC /* MyTalliesWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BBA0DC942CAF33F900A9DDDC /* MyTalliesWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BBA0DC9F2CAF33FB00A9DDDC /* Exceptions for "MyTalliesWidget" folder in "MyTalliesWidgetExtension" target */,
+			);
+			path = MyTalliesWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		BBA0DC8E2CAF33F900A9DDDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA0DC932CAF33F900A9DDDC /* SwiftUI.framework in Frameworks */,
+				BBA0DC922CAF33F900A9DDDC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBB7A08C2CA8626300B6E875 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,10 +104,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BBA0DC482CAF31E400A9DDDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBA0DC492CAF31E400A9DDDC /* WidgetKit.framework */,
+				BBA0DC4B2CAF31E400A9DDDC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BBB7A0862CA8626300B6E875 = {
 			isa = PBXGroup;
 			children = (
+				BBA0DCA32CAF343A00A9DDDC /* MyTalliesWidgetExtension.entitlements */,
 				BBB7A0CB2CA8C8D600B6E875 /* MyTallies */,
+				BBA0DC942CAF33F900A9DDDC /* MyTalliesWidget */,
+				BBA0DC482CAF31E400A9DDDC /* Frameworks */,
 				BBB7A0902CA8626300B6E875 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				BBB7A08F2CA8626300B6E875 /* MyTallies.app */,
+				BBA0DC912CAF33F900A9DDDC /* MyTalliesWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +145,7 @@
 		BBB7A0CB2CA8C8D600B6E875 /* MyTallies */ = {
 			isa = PBXGroup;
 			children = (
+				BBA0DC2F2CAF2D3900A9DDDC /* MyTallies.entitlements */,
 				BBB7A0C82CA8C8D600B6E875 /* MyTalliesApp.swift */,
 				BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */,
 				BB78ADAB2CAE006300741F9D /* NewTallyView.swift */,
@@ -85,6 +161,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BBA0DC902CAF33F900A9DDDC /* MyTalliesWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBA0DCA02CAF33FB00A9DDDC /* Build configuration list for PBXNativeTarget "MyTalliesWidgetExtension" */;
+			buildPhases = (
+				BBA0DC8D2CAF33F900A9DDDC /* Sources */,
+				BBA0DC8E2CAF33F900A9DDDC /* Frameworks */,
+				BBA0DC8F2CAF33F900A9DDDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BBA0DC942CAF33F900A9DDDC /* MyTalliesWidget */,
+			);
+			name = MyTalliesWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = MyTalliesWidgetExtension;
+			productReference = BBA0DC912CAF33F900A9DDDC /* MyTalliesWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BBB7A08E2CA8626300B6E875 /* MyTallies */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBB7A09D2CA8626400B6E875 /* Build configuration list for PBXNativeTarget "MyTallies" */;
@@ -92,10 +190,12 @@
 				BBB7A08B2CA8626300B6E875 /* Sources */,
 				BBB7A08C2CA8626300B6E875 /* Frameworks */,
 				BBB7A08D2CA8626300B6E875 /* Resources */,
+				BBA0DC602CAF31E600A9DDDC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BBA0DC9D2CAF33FB00A9DDDC /* PBXTargetDependency */,
 			);
 			name = MyTallies;
 			packageProductDependencies = (
@@ -114,6 +214,9 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					BBA0DC902CAF33F900A9DDDC = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					BBB7A08E2CA8626300B6E875 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -134,11 +237,19 @@
 			projectRoot = "";
 			targets = (
 				BBB7A08E2CA8626300B6E875 /* MyTallies */,
+				BBA0DC902CAF33F900A9DDDC /* MyTalliesWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BBA0DC8F2CAF33F900A9DDDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBB7A08D2CA8626300B6E875 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,6 +263,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BBA0DC8D2CAF33F900A9DDDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBB7A08B2CA8626300B6E875 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,7 +285,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BBA0DC9D2CAF33FB00A9DDDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBA0DC902CAF33F900A9DDDC /* MyTalliesWidgetExtension */;
+			targetProxy = BBA0DC9C2CAF33FB00A9DDDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BBA0DCA12CAF33FB00A9DDDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MyTalliesWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RKV4UP49S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyTalliesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyTalliesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = createchsol.com.MyTallies.MyTalliesWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBA0DCA22CAF33FB00A9DDDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MyTalliesWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RKV4UP49S6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyTalliesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyTalliesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = createchsol.com.MyTallies.MyTalliesWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BBB7A09B2CA8626400B6E875 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -292,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyTallies/MyTallies.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyTallies/Preview Content\"";
@@ -322,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyTallies/MyTallies.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyTallies/Preview Content\"";
@@ -350,6 +534,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BBA0DCA02CAF33FB00A9DDDC /* Build configuration list for PBXNativeTarget "MyTalliesWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBA0DCA12CAF33FB00A9DDDC /* Debug */,
+				BBA0DCA22CAF33FB00A9DDDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BBB7A08A2CA8626300B6E875 /* Build configuration list for PBXProject "MyTallies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
