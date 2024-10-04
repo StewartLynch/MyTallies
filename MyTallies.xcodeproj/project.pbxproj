@@ -15,6 +15,8 @@
 		BBA0DC922CAF33F900A9DDDC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA0DC492CAF31E400A9DDDC /* WidgetKit.framework */; };
 		BBA0DC932CAF33F900A9DDDC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA0DC4B2CAF31E400A9DDDC /* SwiftUI.framework */; };
 		BBA0DC9E2CAF33FB00A9DDDC /* MyTalliesWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BBA0DC912CAF33F900A9DDDC /* MyTalliesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BBA0DCA42CAF49E900A9DDDC /* Tally.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA52CADCD1200741F9D /* Tally.swift */; };
+		BBA0DCA52CAF664300A9DDDC /* SingleTallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA92CADF51D00741F9D /* SingleTallyView.swift */; };
 		BBB7A0CF2CA8C8D600B6E875 /* MyTalliesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C82CA8C8D600B6E875 /* MyTalliesApp.swift */; };
 		BBB7A0D02CA8C8D600B6E875 /* TallySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */; };
 		BBB7A0D22CA8C8D600B6E875 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB7A0C22CA8C8D600B6E875 /* Preview Assets.xcassets */; };
@@ -267,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA0DCA42CAF49E900A9DDDC /* Tally.swift in Sources */,
+				BBA0DCA52CAF664300A9DDDC /* SingleTallyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 struct SingleTallyView: View {
     let size: Double
@@ -33,12 +34,14 @@ struct SingleTallyView: View {
                 withAnimation {
                     tally.increase()
                     try? context.save()
+                    WidgetCenter.shared.reloadAllTimelines()
                 }
             }
             .onTapGesture(count: 2) {
                 withAnimation {
                     tally.decrease()
                     try? context.save()
+                    WidgetCenter.shared.reloadAllTimelines()
                 }
             }
     }

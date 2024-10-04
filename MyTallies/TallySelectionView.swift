@@ -15,12 +15,15 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 struct TallySelectionView: View {
     @Query(sort: \Tally.name) var tallies: [Tally]
     @State private var selectedTally: Tally?
     @Environment(\.modelContext) var context
     @State private var newTally = false
+    @Environment(\.scenePhase) var scenePhase
+    @State private var id = UUID()
     var body: some View {
         NavigationStack {
             VStack {
@@ -41,6 +44,7 @@ struct TallySelectionView: View {
                             withAnimation {
                                 selectedTally?.reset()
                                 try? context.save()
+                                WidgetCenter.shared.reloadAllTimelines()
                             }
                         } label: {
                             Label("Reset", systemImage: "arrow.counterclockwise")
@@ -53,6 +57,7 @@ struct TallySelectionView: View {
                     Spacer()
                 }
             }
+            .id(id)
             .navigationTitle("My Tallies")
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
@@ -61,6 +66,7 @@ struct TallySelectionView: View {
                             if let selectedTally {
                                 context.delete(selectedTally)
                                 try? context.save()
+                                WidgetCenter.shared.reloadAllTimelines()
                                 if !tallies.isEmpty {
                                     self.selectedTally = tallies.first!
                                 }
@@ -85,6 +91,11 @@ struct TallySelectionView: View {
             .onAppear {
                 if !tallies.isEmpty {
                     selectedTally = tallies.first!
+                }
+            }
+            .onChange(of: scenePhase) {
+                if scenePhase == .active {
+                    id = UUID()
                 }
             }
         }
