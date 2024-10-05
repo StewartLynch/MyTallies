@@ -60,7 +60,18 @@ struct ConfigurableWidgetEntryView : View {
         if entry.selectedTally == nil {
             ContentUnavailableView("No Tallies yet", systemImage: "plus.circle.fill")
         } else {
-            SingleTallyView(size: 60, tally: entry.selectedTally!)
+            Link(destination: URL(string: "mtls://tally/\(entry.selectedTally!.name)")!){
+                ZStack {
+                    Color.clear
+                    VStack {
+                        Button(intent: ConfigurableUpdateIntent(name: entry.selectedTally!.name)) {
+                            SingleTallyView(size: 60, tally: entry.selectedTally!)
+                        }
+                        .buttonStyle(.plain)
+                        Text(entry.selectedTally!.name)
+                    }
+                }
+            }
         }
     }
 }
