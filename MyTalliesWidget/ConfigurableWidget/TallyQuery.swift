@@ -1,7 +1,7 @@
 //
 //----------------------------------------------
 // Original project: MyTallies
-// by  Stewart Lynch on 2024-10-03
+// by  Stewart Lynch on 2024-10-06
 //
 // Follow me on Mastodon: @StewartLynch@iosdev.space
 // Follow me on Threads: @StewartLynch (https://www.threads.net)
@@ -12,31 +12,22 @@
 //----------------------------------------------
 // Copyright © 2024 CreaTECH Solutions. All rights reserved.
 
-
 import AppIntents
 import SwiftData
-import WidgetKit
 
-struct UpdateTallyIntent: AppIntent {
-    static var title: LocalizedStringResource = LocalizedStringResource("Update first tally")
-    static var description: IntentDescription? = IntentDescription("Tap the tally once to increment")
-    
-    func perform() async throws -> some ProvidesDialog {
-        let update = await updateTally()
-        return .result(dialog:IntentDialog("Updated first Tally to \(update)"))
+struct TallyQuery: EntityQuery {
+    func entities(for identifiers: [String]) async throws -> [TallyEntity] {
+        try await suggestedEntities().filter({identifiers.contains($0.id)})
     }
     
-    @MainActor func updateTally() -> Int {
+    @MainActor func suggestedEntities() async throws -> [TallyEntity] {
         let container = try! ModelContainer(for: Tally.self)
         let sort = [SortDescriptor(\Tally.name)]
         let descriptor = FetchDescriptor<Tally>(sortBy: sort)
         let allTallies = try? container.mainContext.fetch(descriptor)
-        if let tally = allTallies?.first {
-            tally.increase()
-            try? container.mainContext.save()
-            WidgetCenter.shared.reloadAllTimelines()
-            return tally.value
-        }
-        return 0
+        let allEntities = allTallies?.map({ tally in
+            TallyEntity(id: tally.name)
+        })
+        return allEntities ?? []
     }
 }

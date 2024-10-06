@@ -68,6 +68,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BB496C3C2CB30E2800B8DF0F /* Exceptions for "MyTalliesWidget" folder in "MyTallies" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ConfigurableWidget/TallyEntity.swift,
+				ConfigurableWidget/TallyQuery.swift,
+				UpdateTallyIntent.swift,
+			);
+			target = BBB7A08E2CA8626300B6E875 /* MyTallies */;
+		};
 		BBA0DC9F2CAF33FB00A9DDDC /* Exceptions for "MyTalliesWidget" folder in "MyTalliesWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -78,9 +87,15 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		BB496C382CB30DB800B8DF0F /* Siri Shortcuts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Siri Shortcuts";
+			sourceTree = "<group>";
+		};
 		BBA0DC942CAF33F900A9DDDC /* MyTalliesWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				BB496C3C2CB30E2800B8DF0F /* Exceptions for "MyTalliesWidget" folder in "MyTallies" target */,
 				BBA0DC9F2CAF33FB00A9DDDC /* Exceptions for "MyTalliesWidget" folder in "MyTalliesWidgetExtension" target */,
 			);
 			path = MyTalliesWidget;
@@ -149,6 +164,7 @@
 		BBB7A0CB2CA8C8D600B6E875 /* MyTallies */ = {
 			isa = PBXGroup;
 			children = (
+				BB496C382CB30DB800B8DF0F /* Siri Shortcuts */,
 				BBA0DC2F2CAF2D3900A9DDDC /* MyTallies.entitlements */,
 				BBB7A0C82CA8C8D600B6E875 /* MyTalliesApp.swift */,
 				BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */,
@@ -201,6 +217,9 @@
 			);
 			dependencies = (
 				BBA0DC9D2CAF33FB00A9DDDC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BB496C382CB30DB800B8DF0F /* Siri Shortcuts */,
 			);
 			name = MyTallies;
 			packageProductDependencies = (

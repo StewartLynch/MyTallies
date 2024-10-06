@@ -1,7 +1,7 @@
 //
 //----------------------------------------------
 // Original project: MyTallies
-// by  Stewart Lynch on 2024-10-03
+// by  Stewart Lynch on 2024-10-06
 //
 // Follow me on Mastodon: @StewartLynch@iosdev.space
 // Follow me on Threads: @StewartLynch (https://www.threads.net)
@@ -13,13 +13,24 @@
 // Copyright © 2024 CreaTECH Solutions. All rights reserved.
 
 
-import WidgetKit
 import SwiftUI
 
-@main
-struct MyTalliesWidgetBundle: WidgetBundle {
-    var body: some Widget {
-//        FirstTallyWidget()
-        ConfigurableWidget()
+struct TallyUpdatedView: View {
+    let tallyName: String
+    let newValue: Int
+    var body: some View {
+        HStack {
+            Text("\(newValue)")
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3))
+            Text("\(tallyName) has been updated")
+        }
+        .font(.largeTitle)
+        .padding()
+        .background(Color(.systemBackground))
     }
+}
+
+#Preview(traits: .sizeThatFitsLayout) {
+    TallyUpdatedView(tallyName: "Beta", newValue: 35)
 }

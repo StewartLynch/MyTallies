@@ -71,6 +71,7 @@ struct TallySelectionView: View {
                                 if !tallies.isEmpty {
                                     self.selectedTally = tallies.first!
                                 }
+                                MyTalliesShortcuts.updateAppShortcutParameters()
                             }
                         } label: {
                             Image(systemName: "trash")

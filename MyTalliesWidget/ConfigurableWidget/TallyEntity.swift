@@ -1,7 +1,7 @@
 //
 //----------------------------------------------
 // Original project: MyTallies
-// by  Stewart Lynch on 2024-10-05
+// by  Stewart Lynch on 2024-10-06
 //
 // Follow me on Mastodon: @StewartLynch@iosdev.space
 // Follow me on Threads: @StewartLynch (https://www.threads.net)
@@ -12,21 +12,13 @@
 //----------------------------------------------
 // Copyright © 2024 CreaTECH Solutions. All rights reserved.
 
-
-
-import WidgetKit
 import AppIntents
-import SwiftData
 
-struct ConfigurationAppIntent: WidgetConfigurationIntent {
-    static var title: LocalizedStringResource { "Selected Tally" }
-    static var description: IntentDescription { "Choose your tally from the list." }
-
-    // An example configurable parameter.
-    @Parameter(title: "Select Tally", default: nil)
-    var selectedTally: TallyEntity?
+struct TallyEntity: AppEntity {
+    var id: String
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = TypeDisplayRepresentation(name: "Selected Tally")
+    var displayRepresentation: DisplayRepresentation {
+        DisplayRepresentation(title: "\(id)")
+    }
+    static var defaultQuery = TallyQuery()
 }
-
-
-
-
