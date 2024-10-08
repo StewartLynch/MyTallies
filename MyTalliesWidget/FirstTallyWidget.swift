@@ -44,7 +44,7 @@ struct Provider: TimelineProvider {
         }
     }
     
-    @MainActor func getTallies() throws -> [Tally] {
+    @MainActor func getTallies() async throws -> [Tally] {
         let sort = [SortDescriptor(\Tally.name)]
         let descriptor = FetchDescriptor<Tally>(sortBy: sort)
         let allTallies = try? container.mainContext.fetch(descriptor)
