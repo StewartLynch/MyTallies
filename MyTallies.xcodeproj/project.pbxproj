@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB3987C42CB72034002732C2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3987C32CB72034002732C2 /* Router.swift */; };
 		BB5440DD2CA8CC6900BB0AA6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5440DC2CA8CC6900BB0AA6 /* Launch Screen.storyboard */; };
 		BB78ADA62CADCD1200741F9D /* Tally.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA52CADCD1200741F9D /* Tally.swift */; };
 		BB78ADA82CADCE0100741F9D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA72CADCE0100741F9D /* MockData.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BB3987C32CB72034002732C2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BB5440DC2CA8CC6900BB0AA6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BB78ADA52CADCD1200741F9D /* Tally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tally.swift; sourceTree = "<group>"; };
 		BB78ADA72CADCE0100741F9D /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				BB78ADAB2CAE006300741F9D /* NewTallyView.swift */,
 				BB78ADA92CADF51D00741F9D /* SingleTallyView.swift */,
 				BB78ADA52CADCD1200741F9D /* Tally.swift */,
+				BB3987C32CB72034002732C2 /* Router.swift */,
 				BB5440DC2CA8CC6900BB0AA6 /* Launch Screen.storyboard */,
 				BBB7A0C42CA8C8D600B6E875 /* Assets.xcassets */,
 				BBB7A0C32CA8C8D600B6E875 /* Preview Content */,
@@ -281,6 +284,7 @@
 				BBB7A0CF2CA8C8D600B6E875 /* MyTalliesApp.swift in Sources */,
 				BB78ADA82CADCE0100741F9D /* MockData.swift in Sources */,
 				BB78ADAC2CAE006300741F9D /* NewTallyView.swift in Sources */,
+				BB3987C42CB72034002732C2 /* Router.swift in Sources */,
 				BBB7A0D02CA8C8D600B6E875 /* TallySelectionView.swift in Sources */,
 				BB78ADA62CADCD1200741F9D /* Tally.swift in Sources */,
 				BB78ADAA2CADF51D00741F9D /* SingleTallyView.swift in Sources */,
