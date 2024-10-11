@@ -1,8 +1,8 @@
 # My Tallies - Widgets - AppIntents & Siri Shortcuts
 
-![mac128](Images/mac128.png) This is completed source code for the **Second** video in the series on a My Tallies app including Widgets (Configurable and Interactive) and AppIntents including Siri Shortcuts.
+![mac128](Images/mac128.png) This is completed source code for the **Third** video in the series on a My Tallies app including Widgets (Configurable and Interactive) and AppIntents including Siri Shortcuts.
 
-
+Release Date: November 24, 2024:
 
 If you want to support my work, you can - </br>
 
