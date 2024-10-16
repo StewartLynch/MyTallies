@@ -13,21 +13,27 @@
 // Copyright © 2024 CreaTECH Solutions. All rights reserved.
 
 
-import SwiftUI
+import Foundation
+import WatchConnectivity
 
-struct ContentView: View {
-    let connectivity = watchOSConnectivity.shared
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+class watchOSConnectivity: NSObject, WCSessionDelegate {
+    static let shared = watchOSConnectivity()
+    override init() {
+        super.init()
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
         }
-        .padding()
     }
-}
+    
+    func session(
+        _ session: WCSession,
+        activationDidCompleteWith activationState: WCSessionActivationState,
+        error: (any Error)?
+    ) {
+        
+    }
 
-#Preview {
-    ContentView()
+    
 }

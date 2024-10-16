@@ -25,6 +25,7 @@ struct TallySelectionView: View {
     @State private var newTally = false
     @Environment(\.scenePhase) var scenePhase
     @State private var id = UUID()
+    let connectivity = iOSConnectivity.shared
     var body: some View {
         NavigationStack {
             VStack {

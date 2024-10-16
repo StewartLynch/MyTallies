@@ -19,6 +19,7 @@
 		BBA0DCA42CAF49E900A9DDDC /* Tally.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA52CADCD1200741F9D /* Tally.swift */; };
 		BBA0DCA52CAF664300A9DDDC /* SingleTallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78ADA92CADF51D00741F9D /* SingleTallyView.swift */; };
 		BBB5C8B42CC01B600035E523 /* MyTalliesWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BBB5C8A72CC01B5F0035E523 /* MyTalliesWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BBB5C92F2CC079C00035E523 /* iOSConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5C92E2CC079C00035E523 /* iOSConnectivity.swift */; };
 		BBB7A0CF2CA8C8D600B6E875 /* MyTalliesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C82CA8C8D600B6E875 /* MyTalliesApp.swift */; };
 		BBB7A0D02CA8C8D600B6E875 /* TallySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */; };
 		BBB7A0D22CA8C8D600B6E875 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB7A0C22CA8C8D600B6E875 /* Preview Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		BBA0DC912CAF33F900A9DDDC /* MyTalliesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyTalliesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA0DCA32CAF343A00A9DDDC /* MyTalliesWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTalliesWidgetExtension.entitlements; sourceTree = "<group>"; };
 		BBB5C8A72CC01B5F0035E523 /* MyTalliesWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyTalliesWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB5C92E2CC079C00035E523 /* iOSConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSConnectivity.swift; sourceTree = "<group>"; };
 		BBB7A08F2CA8626300B6E875 /* MyTallies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTallies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB7A0C22CA8C8D600B6E875 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBB7A0C42CA8C8D600B6E875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				BBA0DC2F2CAF2D3900A9DDDC /* MyTallies.entitlements */,
 				BBB7A0C82CA8C8D600B6E875 /* MyTalliesApp.swift */,
 				BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */,
+				BBB5C92E2CC079C00035E523 /* iOSConnectivity.swift */,
 				BB78ADAB2CAE006300741F9D /* NewTallyView.swift */,
 				BB78ADA92CADF51D00741F9D /* SingleTallyView.swift */,
 				BB78ADA52CADCD1200741F9D /* Tally.swift */,
@@ -381,6 +384,7 @@
 				BB78ADAC2CAE006300741F9D /* NewTallyView.swift in Sources */,
 				BB5716212CB1BD4100C37330 /* Router.swift in Sources */,
 				BBB7A0D02CA8C8D600B6E875 /* TallySelectionView.swift in Sources */,
+				BBB5C92F2CC079C00035E523 /* iOSConnectivity.swift in Sources */,
 				BB78ADA62CADCD1200741F9D /* Tally.swift in Sources */,
 				BB78ADAA2CADF51D00741F9D /* SingleTallyView.swift in Sources */,
 			);
