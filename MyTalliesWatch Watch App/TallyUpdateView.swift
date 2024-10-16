@@ -15,7 +15,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TallyUpdateView: View {
     let connectivity = watchOSConnectivity.shared
     var body: some View {
         VStack {
@@ -29,5 +29,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TallyUpdateView()
 }

@@ -19,7 +19,7 @@ import SwiftUI
 struct MyTalliesWatch_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TallyUpdateView()
         }
     }
 }
