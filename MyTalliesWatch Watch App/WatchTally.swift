@@ -1,7 +1,7 @@
 //
 //----------------------------------------------
 // Original project: MyTallies
-// by  Stewart Lynch on 2024-10-16
+// by  Stewart Lynch on 2024-10-17
 //
 // Follow me on Mastodon: @StewartLynch@iosdev.space
 // Follow me on Threads: @StewartLynch (https://www.threads.net)
@@ -13,15 +13,17 @@
 // Copyright © 2024 CreaTECH Solutions. All rights reserved.
 
 
-import SwiftUI
+import Foundation
 
-@main
-struct MyTalliesWatch_Watch_AppApp: App {
-    @State private var tallyManager = TallyManager.shared
-    var body: some Scene {
-        WindowGroup {
-            TallyUpdateView()
-                .environment(tallyManager)
-        }
+struct WatchTally: Identifiable, Hashable, Codable {
+    var name: String
+    var value: Int = 0
+    var id: String { name }
+    
+    static var mockTallies: [WatchTally] {
+        [
+            WatchTally(name: "Alpha"),
+            WatchTally(name: "Beta", value: 10)
+        ]
     }
 }

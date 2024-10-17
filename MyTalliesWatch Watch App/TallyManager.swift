@@ -1,7 +1,7 @@
 //
 //----------------------------------------------
 // Original project: MyTallies
-// by  Stewart Lynch on 2024-10-16
+// by  Stewart Lynch on 2024-10-17
 //
 // Follow me on Mastodon: @StewartLynch@iosdev.space
 // Follow me on Threads: @StewartLynch (https://www.threads.net)
@@ -13,15 +13,23 @@
 // Copyright © 2024 CreaTECH Solutions. All rights reserved.
 
 
-import SwiftUI
+import Foundation
 
-@main
-struct MyTalliesWatch_Watch_AppApp: App {
-    @State private var tallyManager = TallyManager.shared
-    var body: some Scene {
-        WindowGroup {
-            TallyUpdateView()
-                .environment(tallyManager)
+@Observable
+class TallyManager {
+    static let shared = TallyManager()
+    var tallies: [WatchTally] = []
+    var selectedTally: WatchTally?
+    
+    func updateTallies(tallies: [WatchTally]) {
+        self.tallies = tallies
+        self.selectedTally = tallies.first
+    }
+    
+    func increaseSelected() {
+        if let index = tallies.firstIndex(where: {$0.name == selectedTally?.name}) {
+            tallies[index].value += 1
+            selectedTally?.value += 1
         }
     }
 }

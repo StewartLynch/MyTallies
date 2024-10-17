@@ -17,17 +17,34 @@ import SwiftUI
 
 struct TallyUpdateView: View {
     let connectivity = watchOSConnectivity.shared
+    @Environment(TallyManager.self) var tallyManager
+    @State private var changeSelected = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            Group {
+                if tallyManager.tallies.isEmpty {
+                    ContentUnavailableView("Launch the app on the iPhone", systemImage: "plus.circle.fill")
+                } else {
+                    SingleTallyView()
+                }
+            }
+            .sheet(isPresented: $changeSelected) {
+                MyTalliesListView()
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        changeSelected.toggle()
+                    } label: {
+                        Image(systemName: "list.bullet")
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
-#Preview {
+#Preview(traits: .mockData) {
     TallyUpdateView()
+       
 }

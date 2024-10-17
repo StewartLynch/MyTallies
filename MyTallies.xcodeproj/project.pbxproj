@@ -25,6 +25,11 @@
 		BBB5C93B2CC080980035E523 /* MyTalliesWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5C9352CC080980035E523 /* MyTalliesWatchApp.swift */; };
 		BBB5C93C2CC080980035E523 /* TallyUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5C9362CC080980035E523 /* TallyUpdateView.swift */; };
 		BBB5C93D2CC080980035E523 /* watchOSConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5C9372CC080980035E523 /* watchOSConnectivity.swift */; };
+		BBB5C95F2CC1A5C40035E523 /* WatchTally.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5C95E2CC1A5C40035E523 /* WatchTally.swift */; };
+		BBB5C9602CC1A5C40035E523 /* WatchTally.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5C95E2CC1A5C40035E523 /* WatchTally.swift */; };
+		BBB5C9622CC1A6850035E523 /* TallyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5C9612CC1A6850035E523 /* TallyManager.swift */; };
+		BBB5C9642CC1AA140035E523 /* SingleTallyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5C9632CC1AA140035E523 /* SingleTallyView.swift */; };
+		BBB5C9662CC1B3020035E523 /* MyTalliesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5C9652CC1B3020035E523 /* MyTalliesListView.swift */; };
 		BBB7A0CF2CA8C8D600B6E875 /* MyTalliesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C82CA8C8D600B6E875 /* MyTalliesApp.swift */; };
 		BBB7A0D02CA8C8D600B6E875 /* TallySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7A0C92CA8C8D600B6E875 /* TallySelectionView.swift */; };
 		BBB7A0D22CA8C8D600B6E875 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB7A0C22CA8C8D600B6E875 /* Preview Assets.xcassets */; };
@@ -92,6 +97,10 @@
 		BBB5C9352CC080980035E523 /* MyTalliesWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTalliesWatchApp.swift; sourceTree = "<group>"; };
 		BBB5C9362CC080980035E523 /* TallyUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TallyUpdateView.swift; sourceTree = "<group>"; };
 		BBB5C9372CC080980035E523 /* watchOSConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchOSConnectivity.swift; sourceTree = "<group>"; };
+		BBB5C95E2CC1A5C40035E523 /* WatchTally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTally.swift; sourceTree = "<group>"; };
+		BBB5C9612CC1A6850035E523 /* TallyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TallyManager.swift; sourceTree = "<group>"; };
+		BBB5C9632CC1AA140035E523 /* SingleTallyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTallyView.swift; sourceTree = "<group>"; };
+		BBB5C9652CC1B3020035E523 /* MyTalliesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTalliesListView.swift; sourceTree = "<group>"; };
 		BBB7A08F2CA8626300B6E875 /* MyTallies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTallies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB7A0C22CA8C8D600B6E875 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBB7A0C42CA8C8D600B6E875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +193,10 @@
 			children = (
 				BBB5C9352CC080980035E523 /* MyTalliesWatchApp.swift */,
 				BBB5C9362CC080980035E523 /* TallyUpdateView.swift */,
+				BBB5C9652CC1B3020035E523 /* MyTalliesListView.swift */,
+				BBB5C9632CC1AA140035E523 /* SingleTallyView.swift */,
+				BBB5C95E2CC1A5C40035E523 /* WatchTally.swift */,
+				BBB5C9612CC1A6850035E523 /* TallyManager.swift */,
 				BBB5C9332CC080980035E523 /* Preview Content */,
 				BBB5C9342CC080980035E523 /* Assets.xcassets */,
 				BBB5C9372CC080980035E523 /* watchOSConnectivity.swift */,
@@ -396,8 +409,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB5C95F2CC1A5C40035E523 /* WatchTally.swift in Sources */,
 				BBB5C93B2CC080980035E523 /* MyTalliesWatchApp.swift in Sources */,
+				BBB5C9662CC1B3020035E523 /* MyTalliesListView.swift in Sources */,
 				BBB5C93C2CC080980035E523 /* TallyUpdateView.swift in Sources */,
+				BBB5C9642CC1AA140035E523 /* SingleTallyView.swift in Sources */,
+				BBB5C9622CC1A6850035E523 /* TallyManager.swift in Sources */,
 				BBB5C93D2CC080980035E523 /* watchOSConnectivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB7A0CF2CA8C8D600B6E875 /* MyTalliesApp.swift in Sources */,
+				BBB5C9602CC1A5C40035E523 /* WatchTally.swift in Sources */,
 				BB78ADA82CADCE0100741F9D /* MockData.swift in Sources */,
 				BB78ADAC2CAE006300741F9D /* NewTallyView.swift in Sources */,
 				BB5716212CB1BD4100C37330 /* Router.swift in Sources */,
