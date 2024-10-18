@@ -15,6 +15,7 @@
 
 import Foundation
 import WatchConnectivity
+import SwiftUI
 
 class watchOSConnectivity: NSObject, WCSessionDelegate {
     static let shared = watchOSConnectivity()
@@ -33,6 +34,53 @@ class watchOSConnectivity: NSObject, WCSessionDelegate {
         error: (any Error)?
     ) {
         
+    }
+    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        Task { @MainActor in
+            let tallyManager = TallyManager.shared
+            if let watchTallies = applicationContext["tallies"] as? Data {
+                if let decodedTallies = try? JSONDecoder().decode([WatchTally].self, from: watchTallies) {
+                    tallyManager.tallies = decodedTallies
+                    tallyManager.selectedTally = decodedTallies.first
+                } else {
+                    print("Failed to decode tallies JSON")
+                }
+            } else {
+                if let updatedTally = applicationContext["update"] as? Data {
+                    if let decodedUpdate = try? JSONDecoder().decode(WatchTally.self, from: updatedTally) {
+                        if let index = tallyManager.tallies.firstIndex(where: {$0.name == decodedUpdate.name}) {
+                            tallyManager.tallies[index].value = decodedUpdate.value
+                            if tallyManager.selectedTally?.name == decodedUpdate.name {
+                                withAnimation {
+                                    tallyManager.selectedTally?.value = decodedUpdate.value
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func setContext(to payload: [String : Any]) {
+        let session = WCSession.default
+        if session.activationState == .activated {
+            do {
+                try session.updateApplicationContext(payload)
+            } catch {
+                print("Updating context failed")
+            }
+        }
+    }
+    
+    func updateSelectedTally(selectedTally: WatchTally?) {
+        if let selectedTally {
+            if let jsonData = try? JSONEncoder().encode(selectedTally) {
+                let updatePayload: [String : Any] = ["update" : jsonData]
+                setContext(to: updatePayload)
+            }
+        }
     }
 
     

@@ -30,20 +30,6 @@ struct SingleTallyView: View {
             .padding()
             .frame(width: size * 1.5, height: size * 1.5)
             .background(RoundedRectangle(cornerRadius: 20).fill(.clear).stroke(.primary, lineWidth: 5))
-            .onTapGesture {
-                withAnimation {
-                    tally.increase()
-                    try? context.save()
-                    WidgetCenter.shared.reloadAllTimelines()
-                }
-            }
-            .onTapGesture(count: 2) {
-                withAnimation {
-                    tally.decrease()
-                    try? context.save()
-                    WidgetCenter.shared.reloadAllTimelines()
-                }
-            }
     }
 }
 

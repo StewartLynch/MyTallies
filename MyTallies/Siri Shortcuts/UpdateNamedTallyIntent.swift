@@ -51,9 +51,11 @@ struct UpdateNamedTallyIntent: AppIntent {
         let predicate = #Predicate<Tally> { $0.name == name }
         let descriptor = FetchDescriptor<Tally>(predicate: predicate)
         let foundTallies = try? container.mainContext.fetch(descriptor)
+        let connectivity = iOSConnectivity.shared
         if let tally = foundTallies?.first {
             tally.increase()
             try? container.mainContext.save()
+            connectivity.updateSelectedTally(selectedTally: tally)
             return tally.value
         }
         return 0

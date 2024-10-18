@@ -42,11 +42,28 @@ struct TallySelectionView: View {
                     .padding()
                     if selectedTally != nil {
                         SingleTallyView(size: 100, tally: selectedTally!)
+                            .onTapGesture {
+                                withAnimation {
+                                    selectedTally!.increase()
+                                    try? context.save()
+                                    WidgetCenter.shared.reloadAllTimelines()
+                                    connectivity.updateSelectedTally(selectedTally: selectedTally)
+                                }
+                            }
+                            .onTapGesture(count: 2) {
+                                withAnimation {
+                                    selectedTally!.decrease()
+                                    try? context.save()
+                                    WidgetCenter.shared.reloadAllTimelines()
+                                    connectivity.updateSelectedTally(selectedTally: selectedTally)
+                                }
+                            }
                         Button {
                             withAnimation {
                                 selectedTally?.reset()
                                 try? context.save()
                                 WidgetCenter.shared.reloadAllTimelines()
+                                connectivity.updateSelectedTally(selectedTally: selectedTally)
                             }
                         } label: {
                             Label("Reset", systemImage: "arrow.counterclockwise")
@@ -73,6 +90,7 @@ struct TallySelectionView: View {
                                     self.selectedTally = tallies.first!
                                 }
                                 MyTalliesShortcuts.updateAppShortcutParameters()
+                                connectivity.sendUpdatedTallies(tallies: tallies)
                             }
                         } label: {
                             Image(systemName: "trash")
@@ -87,7 +105,9 @@ struct TallySelectionView: View {
                     }
                 }
             }
-            .sheet(isPresented: $newTally) {
+            .sheet(isPresented: $newTally, onDismiss: {
+                connectivity.sendUpdatedTallies(tallies: tallies)
+            }) {
                 NewTallyView(selectedTally: self.$selectedTally)
                     .presentationDetents([.height(250)])
             }
@@ -99,12 +119,16 @@ struct TallySelectionView: View {
             .onChange(of: scenePhase) {
                 if scenePhase == .active {
                     id = UUID()
+                    connectivity.sendUpdatedTallies(tallies: tallies)
                 }
             }
             .onChange(of: router.tallyName) { oldValue, newValue in
                 if newValue != selectedTally?.name {
                     selectedTally = tallies.first(where: {$0.name == newValue})
                 }
+            }
+            .onChange(of: connectivity.id) {
+                id = connectivity.id
             }
         }
     }
