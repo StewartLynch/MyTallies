@@ -23,7 +23,7 @@ struct TallyUpdateView: View {
         NavigationStack {
             Group {
                 if tallyManager.tallies.isEmpty {
-                    ContentUnavailableView("Launch the app on the iPhone", systemImage: "plus.circle.fill")
+                    ContentUnavailableView("Launch the app on the iPhone", image: "CUImage")
                 } else {
                     SingleTallyView()
                 }

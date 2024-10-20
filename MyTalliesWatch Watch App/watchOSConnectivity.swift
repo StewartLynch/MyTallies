@@ -16,6 +16,7 @@
 import Foundation
 import WatchConnectivity
 import SwiftUI
+import WidgetKit
 
 class watchOSConnectivity: NSObject, WCSessionDelegate {
     static let shared = watchOSConnectivity()
@@ -43,6 +44,8 @@ class watchOSConnectivity: NSObject, WCSessionDelegate {
                 if let decodedTallies = try? JSONDecoder().decode([WatchTally].self, from: watchTallies) {
                     tallyManager.tallies = decodedTallies
                     tallyManager.selectedTally = decodedTallies.first
+                    SharedTally.update(tally: tallyManager.selectedTally)
+                    WidgetCenter.shared.reloadAllTimelines()
                 } else {
                     print("Failed to decode tallies JSON")
                 }
@@ -54,6 +57,8 @@ class watchOSConnectivity: NSObject, WCSessionDelegate {
                             if tallyManager.selectedTally?.name == decodedUpdate.name {
                                 withAnimation {
                                     tallyManager.selectedTally?.value = decodedUpdate.value
+                                    SharedTally.update(tally: tallyManager.selectedTally)
+                                    WidgetCenter.shared.reloadAllTimelines()
                                 }
                             }
                         }

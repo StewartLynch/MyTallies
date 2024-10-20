@@ -14,6 +14,7 @@
 
 
 import SwiftUI
+import WidgetKit
 
 struct SingleTallyView: View {
     @Environment(TallyManager.self) var tallyManager
@@ -36,6 +37,8 @@ struct SingleTallyView: View {
                     tallyManager.increaseSelected()
                     let connectivity = watchOSConnectivity.shared
                     connectivity.updateSelectedTally(selectedTally: tallyManager.selectedTally)
+                    SharedTally.update(tally: tallyManager.selectedTally)
+                    WidgetCenter.shared.reloadAllTimelines()
                 }
             }
         }
