@@ -2,7 +2,7 @@
 
 ![mac128](Images/mac128.png) This is the Starter Project for the series on a My Tallies app including Widgets (Configurable and Interactive) and AppIntents including Siri Shortcuts.
 
-
+Scheduled Release Date: November 17, 2024
 
 If you want to support my work, you can - </br>
 
