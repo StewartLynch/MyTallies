@@ -2,7 +2,7 @@
 
 ![mac128](Images/mac128.png) This is completed source code for the **Third** video in the WatckKit section of the MyTallies app series and the **seventh** and **final** video in theMy Tallies app that also includes Widgets (Configurable and Interactive) and AppIntents including Siri Shortcuts.
 
-
+Scheduled Release Date: December 22, 2024
 
 If you want to support my work, you can - </br>
 
