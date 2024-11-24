@@ -2,7 +2,9 @@
 
 ![mac128](Images/mac128.png) This is completed source code for the **Third** video in the series on a My Tallies app including Widgets (Configurable and Interactive) and AppIntents including Siri Shortcuts.
 
-Release Date: November 24, 2024:
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=I4wH6nllUvA)
+" target="_blank"><img src="http://img.youtube.com/vi/I4wH6nllUvA)/0.jpg" 
+alt="Configurable Widget" width="480" height="360" border="1" /></a>
 
 If you want to support my work, you can - </br>
 
