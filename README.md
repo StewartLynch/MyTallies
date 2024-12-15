@@ -2,7 +2,9 @@
 
 ![mac128](Images/mac128.png) This is completed source code for the **Second** video in the WatkchKit session on the series on a My Tallies app.
 
-Scheduled Release Date: December 15, 2024
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=fCx5AeUO6MM
+" target="_blank"><img src="http://img.youtube.com/vi/fCx5AeUO6MM/0.jpg" 
+alt="WatchKit 2 - WatchConnectivity" width="480" height="360" border="1" /></a>
 
 If you want to support my work, you can - </br>
 
